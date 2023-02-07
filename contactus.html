@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .cover img{
+            width: 100%;
+            height: 50vh;
+        }
+        *{
+    margin: 0px;
+}
+.maincontainer{
+    width: 100%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    height: 20vh;
+}
+.navleft{
+    padding-right: 120px;
+    background-color: white;
+    /* height: 10vh; */
+}
+.nav{
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navright{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    /* margin-top: 30px; 
+    margin-right: 40px; */
+    background-color: white;
+    padding-top: 30px;
+    padding-right: 40px;
+    height: 10vh;
+
+}
+.navright a{
+    color: black;
+    text-decoration: none;
+
+}
+.cover{
+    position:relative;
+    margin-top: 20vh;
+    width: 100%;
+
+}
+.subnav{
+    position: fixed;
+    
+    z-index: 3;
+    background-color: rgb(32, 84, 156);
+    width:80% ;
+    height: 7vh;
+    border-radius: 30px;
+    top: 15vh;
+    left: 15%;
+    right: 5%;
+    display: flex;
+    justify-content: left;
+    /* padding-top: 15px;
+    padding-bottom: 10px; */
+    align-items: center;
+
+}
+.subnav a{
+    height: 30px;
+    text-decoration: none;
+    color: white;
+}
+.search{
+    border-radius: 50px;
+    height: 30px;
+    width: 10%;
+    align-items: center;
+    background-color:rgb(255, 255, 255) ;
+}
+#input{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    position: relative;
+    left: 30px;
+    width: 10%;
+    border-radius: 20px;
+}
+#input:focus{
+outline: none;
+width: 85%;
+transition: 0.5s;
+}
+.search i{
+    background-color:rgb(247, 251, 255) ;
+    position: relative;
+    padding-top: 5px;
+    align-items: center;
+    height: 22.7px;
+    color:rgb(92, 93, 94) ;
+}.down{
+    /* position: absolute;
+    bottom: 0px; */
+    width: 100%;
+    height: 30vh;
+    background-color: rgba(0, 0, 0, 0.687);
+    
+}
+.middle{
+    display: flex;
+    justify-content: space-around;
+}
+.ft1{
+    display: flex;
+    justify-content:space-between ;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 50px;
+}
+.ft1 p{
+    padding-right: 15px;
+    font-size: small;
+}
+.ft2 {
+    display: flex;
+    justify-content: center;
+}
+.ft2 i{
+    font-size:30px;
+    padding-right:20px;
+}
+.cprt{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}
+.rqst{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(253, 9, 66);
+    border-radius: 50px;
+    width: 30%;
+    position: fixed;
+    bottom: 6px;
+    right: 35%;
+}
+
+.rqst a{
+    margin: 10px;
+    text-decoration: none;
+    color: azure;
+    font-size: large;
+}
+#p1,pw{
+    color: white;
+    padding: 10px;
+    word-spacing: 8px;
+
+} 
+.card{
+    width: 400px;
+    border-radius: 10px;
+    border: 2px solid grey;
+    /* height: 40vh; */
+    padding: 20px;
+    line-height: 28px;
+    padding-left: 30px;
+    margin: 30px; 
+    background-color: rgb(239, 247, 244);   
+}
+.card:hover{
+    box-shadow: 20px 20px 50px 20px rgb(196, 194, 194);
+}
+#crd{
+    width: 400px;
+}
+.card h3{
+    color: rgb(27, 97, 201);
+}
+.ebot{
+    width: 50%;
+    background-color: rgb(206, 225, 245);
+    position: relative;
+    left:20%;
+    height: 80vh;
+    border-radius: 30px;
+    /* margin: 30px; */
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 80px;
+    /* z-index: 1; */
+
+}
+.input2{
+    border: 1px solid;
+    border-radius: 8px;
+    height: 30px;
+    width: 85%;
+    /* margin-left: 200px; */
+    margin: 20px;
+    background-color: aliceblue;
+
+    /* box-shadow: inset 10px 10px 70px rgb(238, 243, 247); */
+}
+.input2t{
+    border: 1px solid;
+    border-radius: 8px;
+    height: 30px;
+    width: 85%;
+    margin-left: 20px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background-color: aliceblue;
+
+    /* box-shadow: inset 10px 10px 80px rgb(237, 236, 236); */
+}
+
+#tarea{
+    margin-left: 20px;
+    background-color: aliceblue;
+
+}
+#srccon{
+    position: relative;
+    padding-top: 5px;
+    left: 20px;               
+    /* align-items: center; */
+    height: 23px;
+    font-size: x-large;
+    color:rgb(212, 213, 216) ;
+}
+#btn{
+    width: 20%;
+    border-radius: 20px;
+    height: 40px;
+    border: transparent;
+    margin-left: 250px;
+    background-color: rgb(88, 165, 233);
+    color: rgb(248, 250, 250) ;
+    font-family:"Bold";
+    font-weight: 100;
+    font-size: 18px;    
+    margin-top: 20px;
+}
+.gmap{
+    padding-top: 10vh;
+    height: 500px;
+}
+.etop{
+    background-color: rgb(21, 115, 197);
+    width: 40%;
+    height: 8vh;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;    
+    margin-left:340px;
+    position: relative;
+    top: 55px;
+    z-index: 1;
+}
+.etop h2{
+    margin-left:60px;
+}
+.social1{
+    position: fixed;
+    right: 1px;
+    top: 40%;
+    z-index: 2;
+    background: #3B5998;
+    color: white;
+  width: 50px;
+  height: 50px;
+}
+.fa-brands{
+    /* width: 100%;
+  height: 50px; */
+  
+  font-size: 50px;
+}
+.social2{
+    position: fixed;
+    right: 1px;
+    top: 48.4%;
+    z-index: 2;
+    background: #55ACEE;
+  color: white;
+}
+.social3{
+    position: fixed;
+    right: 1px;
+    top: 56.5%;
+    z-index: 2;
+    background: #dd4b39;
+  color: white;
+  /* font-size: 50px;
+  width: 50px; */
+}
+
+ 
+    </style>
+
+</head>
+<body>
+    
+    <div class="maincontainer">
+        
+        <div class="nav">
+            <div class="navleft"><img src="hsplogo.jpg"></div>
+            <div class="navright">
+                <a href="website.html">Home</a>
+                <a href="contactus.html">Contact us</a>
+
+                <a href="web-cs.html" target="_blank">Customersupport</a>
+                <!-- <a href="#">Careers</a> -->
+                <a href="prevent.html">Events</a>
+                <a href="conandwork.html">Conferences and Workspace</a>
+                
+                <a href="prlocation.html"><i class="fa-solid fa-location-dot"></i>Loction</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <!-- <a href="#">About US</a>
+            <a href="#">Specialities</a>
+            <a href="#">Find A Doctor</a>
+            <a href="#">Education Hub</a>
+            <a href="#">Research</a>
+            <a href="#">Health Packages</a> -->
+            <i id="srccon" class="fa-solid fa-magnifying-glass"></i><input id="input" type="text" name=""placeholder="search">
+
+
+        </div>
+        <div class="social1">
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="social2">
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="social3">
+            <i class="fa-brands fa-google"></i>   
+        </div>
+        
+    <div class="cover">
+        <img src="https://www.henryschein.com/us-en/images/medical/banner-help_1600.jpg"> 
+    </div>
+    <div class="middle">
+        <div id="crd">
+        <div class="card">
+            <h3>ASIAN INSTITUTE OF GASTROENTEROLOGY</h3>
+            <p id="p2">6-3-661, Somajiguda, Sangeet Nagar,</p>
+            <p id="p2">Somajiguda, Hyderabad, Telangana 500082</p>
+            <p id="p2">Walk-In for Appointments</p>
+            <!-- <p id="p2">info@aighospitals.com</p>
+            <p id="p2">Phone: +91-40-4244 4222 / 6744 4222</p>
+            <p id="p2">Fax: 91-40-2332 4255</p> -->
+        </div>
+        <div class="card">
+            <h3>AIG HOSPITALS, GACHIBOWLI (A UNIT OF ASIAN INSTITUTE OF GASTROENTEROLOGY)</h3>
+            <p id="p2">1-66/AIG/2 to 5, Mindspace Road, Gachibowli</p>
+            <p id="p2">Hyderabad, Telangana 500030</p>
+            <p id="p2">Emergency Number: +91-40-42444244</p>
+            <p id="p2">info@aighospitals.com</p>
+            <p id="p2">Phone: +91-40-4244 4222 / 6744 4222</p>
+            <p id="p2">Fax: 91-40-2332 4255</p>
+        </div>
+        <div class="card">
+            <h3>INTERNATIONAL SERVICES AND BUSINESS ENQUIRIES</h3>
+            <p id="p2">Mr. Santosh Kumar Sahoo</p>
+            <p id="p2">Vice President</p>
+            <p id="p2">Business Development & International Relations</p>
+            <p id="p2">Email: international.patient@aighospitals.com</p>
+            <p id="p2">Mr. Niladri B. Samal</p>
+            <p id="p2">General Manager International Relations</p>
+            <p id="p2">Mob: +91 9000264442</p>
+            <p id="p2">Email: niladrib.samal@3.108.62.224</p>
+
+        </div>
+        </div>
+        <div class="gmap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.9058587213967!2d79.76489731403159!3d11.701079944646352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54976f3c408edb%3A0xd8a1307c810f163d!2sAIG%20HOSPITAL!5e0!3m2!1sen!2sin!4v1675466278160!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        
+    </div>
+    <div class="end">
+        <div class="etop">
+            <h2>ENQUIRY /QUERY /SUGGESTION</h2>
+        </div>
+        <div class="ebot" id="ebot">
+            <input class="input2t" type="text" placeholder="Name"></br>
+            <input class="input2" type="email"placeholder="email"></br>
+            <input class="input2" type="text"placeholder="mobile"></br>
+            <input class="input2" type="text"placeholder="speciality"></br>
+            <textarea  id="tarea" placeholder="Start Typing Here(Optional)" cols="70" rows="10"></textarea></br>
+            <button id="btn" type="submit"> SUBMIT  </button>
+        </div>
+    </div>
+	
+
+
+
+
+    <div class="down">
+        <div class="ft1">
+            <P id="p1">PATIENT INFORMATION</P>
+            <P id="p1">INSURANCE&TPA</P>
+            <P id="p1">INTERNATIONAL PATIENTS</P>
+            <P id="p1">BIOEDICAL WASTE MAHAGEMENT</P>
+            <P id="p1">AIG BROCHURE</P>
+        </div>
+        <div class="ft2">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="cprt"><p>CopyRight2023,AIG Hostipals</p></div>
+        <div class="rqst">
+            <a href="login.html" id="rq">Request An Appointment</p>
+            
+        </div>
+    </div>
+</body>
+</html>

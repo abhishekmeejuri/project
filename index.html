@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="nav">
+            <div class="navleft"><img src="hsplogo.jpg"></div>
+            <div class="navright">
+                <a href="website.html">Home</a>
+
+                <a href="contactus.html">Contact us</a>
+
+                <a href="web-cs.html" target="_blank">Customersupport</a>
+                <!-- <a href="#">Careers</a> -->
+                <a href="prevent.html">Events</a>
+                <a href="conandwork.html">Conferences and Workspace</a>
+                <a href="prlocation.html"><i class="fa-solid fa-location-dot"></i>Loction</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                  <a href="#middle">Overview</a>
+                  <a href="#news">news</a>
+                  <a href="#facilities">Our Facilities</a>
+                  <a href="#facilities">Our Network</a>
+                </div>
+              </div>
+            
+            <!-- <a href="#">Specialities</a>
+            <a href="#">Find A Doctor</a>
+            <a href="#">Education Hub</a>
+            <a href="#">Research</a>
+            <a href="#">Health Packages</a> -->
+            <i id="srccon" class="fa-solid fa-magnifying-glass"></i><input id="input" type="text" name=""placeholder="search">
+
+
+        </div>
+        <div class="social1">
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="social2">
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="social3">
+            <i class="fa-brands fa-google"></i>   
+        </div>
+        <div class="cover">
+            <div class="con">
+                <div class="lt" onclick="fun1()"><i class="fa-solid fa-less-than"></i></div>
+                 <img id="i1" src="https://aighospitals.com/wp-content/uploads/2021/05/Covid-19-Protocal-guide.jpg" width="100%"/>
+                <div class="rt" onclick="fun()"><i class="fa-solid fa-greater-than"></i></div>
+              <div class="dotcon">
+                <div onclick="fun2(0,this)"><i class="fa-solid fa-circle"></i></div>
+                <div onclick="fun2(1,this)"><i class="fa-regular fa-circle"></i></div>
+                <div onclick="fun2(2,this)"><i class="fa-regular fa-circle"></i></div>
+                <div onclick="fun2(3,this)"><i class="fa-regular fa-circle"></i></div>
+                <!-- <div onclick="fun2(4,this)"><i class="fa-regular fa-circle"></i></div> -->
+              </div>  
+              </div>   
+              
+                 
+                   <script>
+                   var i=0
+                   var arr=["https://aighospitals.com/wp-content/uploads/2022/12/The-Week-2022-AIG-Hospitals.jpg","https://aighospitals.com/wp-content/uploads/2021/06/the-care-you-need-close-to-home.jpg","https://aighospitals.com/wp-content/uploads/2022/02/JCI-accredited-AIG-Hospitals.jpg","https://aighospitals.com/wp-content/uploads/2021/05/Covid-19-Protocal-guide.jpg"]
+                function fun(){
+                  let re=document.getElementsByClassName("fa-circle")
+                  re[i].className="fa-regular fa-circle"
+                 i++
+                  
+                    if(i>=arr.length){
+                      i=0
+                    }
+                   
+                    console.log(i)
+                    document.getElementById("i1").src=arr[i]
+                    re[i].className="fa-solid fa-circle"
+              
+                  }
+                  function fun1()
+                  {
+                    let re=document.getElementsByClassName("fa-circle")
+                  re[i].className="fa-regular fa-circle"
+              i--;
+              if(i==-1)
+              {
+                i=arr.length-1
+              }
+              console.log(i)
+              document.getElementById("i1").src=arr[i]
+              re[i].className="fa-solid fa-circle"
+                  }
+              
+                 
+               function fun2(ind,e)
+               {
+                let re=document.getElementsByClassName("fa-solid fa-circle")
+                if(re.length>0)
+                {
+                  re[0].className="fa-regular fa-circle"
+                }
+              e.firstChild.className="fa-solid fa-circle"
+                document.getElementById("i1").src=arr[ind]
+                i=ind
+               } 
+              
+              
+               function fun3(){
+                let re= document.getElementsByClassName("fa-circle")
+                re[i].className="fa-regular fa-circle"
+                
+                i++
+                 
+                   if(i>=arr.length){
+                     i=0
+                   }
+                  
+                   console.log(i)
+                   document.getElementById("i1").src=arr[i]
+                   re[i].className="fa-solid fa-circle"
+              
+                 }
+                 
+              
+                setInterval(fun3,3000)
+                   
+                  </script>
+        </div>
+        
+        <div class="middle" id="middle">
+            <div class="mlt">
+                <h2>OVERVIEW</h2>
+                <img src="https://aighospitals.com/wp-content/uploads/2021/06/Overview.jpg">
+                <div class="description">
+                    Asian Institute of Gastroenterology, is officially recognized as one of the only 17 hospitals in the world as a Centre of Excellence for Gastroenterology - A rare distinction for any hospital, placing it ahead of many other outstanding medical institutions in the world. AIG Hospitals is an integrated healthcare system.
+                </div>
+            </div>
+            <div class="mm">
+                <h2>CLINICAL SPECIALITY</h2>
+                <div class="s1"><img src="https://aighospitals.com/wp-content/uploads/2018/07/Organ-Transplant.png"></div>
+                <h2>MULTI ORGAN TRANSPLANTATION </h2>
+                <P class="pw">Organ transplantation is a medical procedure in which an organ is removed from one body and placed in the body of a recipient, to replace a damaged or missing organ. The donor and recipient may be at the same location, or organs may be transported from a donor site to another location. Organ donors may be living, brain-dead, or dead via circulatory death.</P>
+            </div>
+            
+            
+        </div>
+        <div class="doctors">
+            <h2>KEY DOCTORS</h2>
+            <div class="docsdet1">
+                
+                <div class="doc">
+                    <h3>CHAIRMAN</h3>
+                    <img src="https://aighospitals.com/wp-content/uploads/2018/04/key-doctors.jpg">
+                    <div class="docdesc">
+                        <h3>Dr.D.Nageshwar Reddy</h3>
+                        <p id="dp">MD, DM, D.Sc, FAMS, FRCP, FASGE, FACG, MWGO, FAGA, FJGES</p></div>
+                </div>
+                <div class="doc">
+                    <h3>Chief of Surgical Gastroenterology</h3>
+                    <img src="https://aighospitals.com/wp-content/uploads/2017/12/Dr.G.V.-rao-200x228.jpg">
+                    <div class="docdesc">
+                        <h3>Dr.G.V.Rao</h3>
+                        <p id="dp">MS, MAMS, FRCS</p></div>
+                </div>
+                <div class="doc">
+                    <h3>Mentor And Patron</h3>
+                    <img src="https://aighospitals.com/wp-content/uploads/2019/12/Dr-Soma-Raju-Consultant-Cardiologist.jpg">
+                    <div class="docdesc">
+                        <h3>Dr.B.Soma Raju</h3>
+                        <p id="dp">MBBS, MD, DM</p></div>
+                </div>
+
+            </div>
+            <div class="docsdet2">
+                
+                <div class="doc">
+                    <h3>Director-Hepetology</h3>
+                    <img src="https://aighospitals.com/wp-content/uploads/2017/12/Dr-P-N-Rao-200x228.jpg">
+                    <div class="docdesc">
+                        <h3>Dr.P Nagaraja Rao</h3>
+                        <p id="dp">MD, DM</p></div>
+                </div>
+                <div class="doc">
+                    <h3>Director-Cardiology</h3>
+                    <img src="https://aighospitals.com/wp-content/uploads/2017/12/Prasad-Reddy-02.jpg">
+                    <div class="docdesc">
+                        <h3>Dr.R.Prasad Reddy</h3>
+                        <p id="dp">MD,DM</p></div>
+                </div>
+                <div class="doc">
+                    <h3>Director Pancreatology</h3>
+                    <img src="https://aighospitals.com/wp-content/uploads/2017/12/Dr.-Rupjyothi-Picture-1.png">
+                    <div class="docdesc">
+                        <h3>Dr. Rupjyoti Talukdar</h3>
+                        <p id="dp">MD, FICP</p></div>
+                </div>
+
+            </div>
+        </div>
+        <div id="facilities">
+            <div id="fclts">
+            <div class="head">
+                <h1>FACILITIES </h1>
+            </div>
+            <ul>
+                <li>Ambulance Services</li>
+                <li>24-hour Emergency Services</li>
+                <li> and Specialized Consultation</li>
+                <li>Diagnostic Colonoscopy Suites</li>
+                <li>Diagnostic Endoscopic Suites</li>
+                <li>ERCP</li>
+                <li>EUS</li>
+                <li> ESWL</li>
+                <li> Manometry</li>
+                <li>Capsule Endoscopy</li>
+                <li>Bronchoscopy</li>
+                <li> EBUS</li>
+                <li> Operating Rooms</li>
+                <li>Robotic Surgery Operating Rooms</li>
+                <li>Cath Labs</li>
+                <li>intensive Care Units</li>
+                <li>Coronary Care Unit</li>
+                <li>Transplant Intensive Care Units</li>
+                <li>Isolation Rooms</li>
+    
+            </ul>
+            </div>
+            <div class="ontwrk">
+                <h1 id="hontwrk">OUR NETWORK</h1>
+                <img src="https://aighospitals.com/wp-content/uploads/2018/03/location.png">
+                <h3>800 Bedded Multi - Specialty Hospital with</br>
+                     Gastroenterology as Centre of Excellence
+
+                </h3>
+            </div> 
+        </div>
+        
+        
+        <div class="news" id="news"><img src="https://aighospitals.com/wp-content/uploads/2021/05/Covid-19-Protocal-guide.jpg"></div>
+        <div class="media1">
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/462pC8Sy8xU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3 id="yt">Dr. Nageshwar Reddy Open Heart With RK | Season:1 - Episode:206</h3>
+            </div>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uG1ggpGHGZ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3 id="yt">A New Surgery Can Reverse Diabetes | Dr. Nageswar Reddy with ETV</h3>
+
+            </div>
+           
+        </div>
+        <div class="media2">
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-TgmE_drn18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                
+                <h3 id="yt">24th Annual Conference ISNACC Day - 3 | AIG Hospitals</h3>
+            </div>
+            <div>
+                <iframe id="v4" width="560" height="315" src="https://www.youtube.com/embed/2VNMRiTbGQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                
+                <h3 id="yt">AIG Hospitals Launches Wellness Centre – redefining personalized and precision medicine</h3>
+
+            </div>
+           
+        </div>
+
+        <div class="down">
+            <div class="ft1">
+                <P>PATIENT INFORMATION</P>
+                <P>INSURANCE&TPA</P>
+                <P>INTERNATIONAL PATIENTS</P>
+                <P>BIOEDICAL WASTE MAHAGEMENT</P>
+                <P>AIG BROCHURE</P>
+            </div>
+            <div class="ft2">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="cprt"><p>CopyRight2023,AIG Hostipals</p></div>
+            <div class="rqst">
+                <a href="login.html" id="rq">Request An Appointment</a>
+                <!-- <a href="" >Find A Doctor</a> -->
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

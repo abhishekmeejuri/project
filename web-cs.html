@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            /* *{ 
+                margin: 0;
+            }*/
+            .nav{
+                display: flex;
+                justify-content: space-between;
+            }
+            .right{
+                position: relative;
+                right: 190px;
+            }.middle{
+                position: relative;
+            }
+            .wel{
+                width: 100%;
+                display:inline-flex;
+                justify-content: center;
+                
+            }
+            .wel img{
+                width: 70%;
+                padding-bottom: 60px;
+                background-color: rgb(255, 255, 255);
+                border:1px solid rgba(76, 74, 74,0.8);
+                border-color: grey;
+
+            }
+            .login{
+                background-color: rgba(19, 157, 242, 0.806);
+                width: 100%;
+                height: 30vh;
+                position: absolute;
+                top: 34.6vh;
+
+            }
+            i{
+                color: aliceblue;
+                background-color: black;
+                padding: 10px 10px;
+            }
+            input{
+                height: 37px;
+            }
+            h2{
+                color: aliceblue;
+                text-align: center;
+            }
+            .logindet{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                justify-self: center;
+            }
+            button{
+                background-color: rgb(15, 79, 161);
+                border: 0;
+                width: 104px;
+                height: 37px;
+                color: aliceblue;
+                border-radius: 3px;
+            }
+            .det{
+                width: 550px;
+                display: flex;
+                justify-content: space-between;
+            }
+            #d{
+                text-align: center;
+                margin:15px;
+            }
+            a:link{
+                text-decoration-color: aliceblue;
+                color: aliceblue;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <div class="left"><img src="hsplogo2.jpg"></div>
+            <div class="right"><img src="navright.jpg"></div>
+        </div>
+        <div class="middle">
+            <div class="wel"><img src="welcome.jpg"></div>
+            <div class="login">
+                <h2>LOGIN</h2>
+                <div class="logindet">
+                    <div class="det">
+                        <div class="user"><i class="fa-solid fa-user"></i><input type="" placeholder="Username"></div>
+                        <div cass="pass"><i class="fa-solid fa-lock"></i><input type="password" placeholder="Password"></div>
+                        <button>login</button>
+                    </div>
+                </div>
+                <div id="d"><a href="#">Generate Password</a> <a href="#">Forget Password?</a></div>
+            </div>
+        </div>
+    </body>
+</html>

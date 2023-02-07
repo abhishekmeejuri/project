@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>title</title>
+    <style>
+        *{
+    margin: 0px;
+}
+.maincontainer{
+    width: 100%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    height: 20vh;
+}
+.navleft{
+    padding-right: 120px;
+    background-color: white;
+    /* height: 10vh; */
+}
+.nav{
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navright{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    /* margin-top: 30px; 
+    margin-right: 40px; */
+    background-color: white;
+    padding-top: 30px;
+    padding-right: 40px;
+    height: 10vh;
+
+}
+.navright a{
+    color: black;
+    text-decoration: none;
+
+}
+.cover{
+    position:relative;
+    margin-top: 20vh;
+    width: 100%;
+
+}
+.subnav{
+    position: fixed;
+    
+    z-index: 2;
+    background-color: rgb(32, 84, 156);
+    width:80% ;
+    height: 7vh;
+    border-radius: 30px;
+    top: 15vh;
+    left: 15%;
+    right: 5%;
+    display: flex;
+    justify-content: left;
+    /* padding-top: 15px;
+    padding-bottom: 10px; */
+    align-items: center;
+
+}
+.subnav a{
+    height: 30px;
+    text-decoration: none;
+    color: white;
+}
+.search{
+    border-radius: 50px;
+    height: 30px;
+    width: 10%;
+    align-items: left;
+    background-color:rgb(255, 255, 255) ;
+    position: relative;
+    left: 10px;
+}
+#input{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    position: relative;
+    left: 20px;
+    width: 10%;
+    border-radius: 20px;
+}
+#input:focus{
+outline: none;
+width: 90%;
+transition: 0.5s;
+}
+#srccon{
+    font-size: x-large;
+    position: relative;
+    left: 10px;
+}
+.search i{
+    font-size: xx-large;
+    background-color:rgb(247, 251, 255) ;
+    position: relative;
+    padding-top: 5px;
+    align-items: center;
+    
+    height: 22.7px;
+    color:rgb(90, 91, 92) ;
+}
+.container{
+    position: relative;
+    top: 20vh;
+}
+h2{
+    text-align: center;
+    padding-top: 6vh;
+
+}
+h3{
+    text-align: center;
+}
+.ev1{
+    background-color: rgba(235, 20, 34, 0.904);
+    border-radius: 20px;
+}
+.ev1 img{
+margin-left: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+border: 3px solid aliceblue;
+border-radius: 20px;
+}
+.desc h3{
+    padding-bottom: 30px;
+}
+.desc a{
+    color: white;
+    text-decoration: none;
+}
+.events{
+    display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 50px;
+  column-gap: 50px;
+  padding: 10px;
+}
+.cardimg {
+    display: block;
+    height: 220px;
+    width: 100%;
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+}
+.down{
+    /* position: absolute;
+    bottom: 0px; */
+    width: 100%;
+    height: 30vh;
+    background-color: rgba(0, 0, 0, 0.687);
+    
+}
+.ft1{
+    display: flex;
+    justify-content:space-between ;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 50px;
+}
+.ft1 p{
+    padding-right: 15px;
+    font-size: small;
+}
+.ft2 {
+    display: flex;
+    justify-content: center;
+}
+.ft2 i{
+    font-size:30px;
+    padding-right:20px;
+}
+.cprt{
+    display: flex;
+    justify-content: center;
+}
+.rqst{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(252, 11, 67);
+    border-radius: 50px;
+    width: 30%;
+    position: fixed;
+    bottom: 6px;
+    right: 35%;
+}
+/* #rq{
+    border-right: 2px solid rgb(65, 64, 64);
+} */
+.rqst a{
+    margin: 10px;
+    color: azure;
+    text-decoration: none;
+}
+p,pw{
+    color: white;
+    padding: 10px;
+    word-spacing: 8px;
+
+}
+.ev1:hover{
+    box-shadow: 10px 10px 50px 10px black;
+}
+.social1{
+    position: fixed;
+    right: 1px;
+    top: 40%;
+    z-index: 2;
+    background: #3B5998;
+    color: white;
+  width: 50px;
+  height: 50px;
+}
+.fa-brands{
+    /* width: 100%;
+  height: 50px; */
+  
+  font-size: 50px;
+}
+.social2{
+    position: fixed;
+    right: 1px;
+    top: 48.4%;
+    z-index: 2;
+    background: #55ACEE;
+  color: white;
+}
+.social3{
+    position: fixed;
+    right: 1px;
+    top: 56.5%;
+    z-index: 2;
+    background: #dd4b39;
+  color: white;
+  /* font-size: 50px;
+  width: 50px; */
+}
+
+    </style>
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="nav">
+            <div class="navleft"><img src="hsplogo.jpg"></div>
+            <div class="navright">
+                <a href="website.html">Home</a>
+
+                <a href="contactus.html">Contact us</a>
+                <a href="web-cs.html" target="_blank">Customersupport</a>
+                
+                <!-- <a href="#">Careers</a> -->
+                <a href="prevent.html">Events</a>
+                <a href="conandwork.html">Conferences and Workspace</a>
+                
+                <a href="prlocation.html"><i class="fa-solid fa-location-dot"></i>Loction</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <!-- <a href="#">About US</a>
+            <a href="#">Specialities</a>
+            <a href="#">Find A Doctor</a>
+            <a href="#">Education Hub</a>
+            <a href="#">Research</a>
+            <a href="#">Health Packages</a> -->
+            <i id="srccon" class="fa-solid fa-magnifying-glass"></i><input id="input" type="text" name=""placeholder="search">
+
+
+        </div>
+        <div class="social1">
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="social2">
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="social3">
+            <i class="fa-brands fa-google"></i>   
+        </div>
+    <div class="container">
+        <h2> Latest Events</h2>
+        <div class="events">
+            <div class="ev1">
+                <img src="https://aighospitals.com/wp-content/uploads/2022/07/Annual-Day.jpg">
+                <div class="desc">
+                    <h3><a href="https://aighospitals.com/event/4th-anniversary-celebrations-at-aig-hospitals/">4th anniversary celebrations at aig-hospitals</a></h3>
+                </div>
+            </div>
+            <div class="ev1">
+                <img src="https://aighospitals.com/wp-content/uploads/2022/06/Heath-Check-Up-MAA-Members.jpg">
+                <div class="desc">
+                    <h3><a href="https://aighospitals.com/event/aig-hospitals-conducts-heath-check-up-for-maa-members/">AIG HOSPITALS CONDUCTS EXCLUSIVE PREVENTIVE HEATH CHECK-UP FOR MAA MEMBERS</a></h3>
+                </div>
+            </div>
+            <div class="ev1">
+                <img src="https://aighospitals.com/wp-content/uploads/2022/06/mind-management.jpg">
+                <div class="desc">
+                    <h3><a href="https://aighospitals.com/event/refreshing-relaxing-mind-management-session-at-aig-hospitals/">A REFRESHING AND RELAXING MIND MANAGEMENT SESSION AT AIG HOSPITALS</a></h3>
+                </div>
+            </div>
+            <div class="ev1">
+                <img src="https://aighospitals.com/wp-content/uploads/2022/06/World-Hand-Hygiene-Day.jpg">
+                <div class="desc">
+                    <h3><a href="https://aighospitals.com/event/celebrating-world-hand-hygiene-day-at-aig-hospitals/">CELEBRATING WORLD HAND HYGIENE DAY AT AIG HOSPITALS: A FUN-FILLED EVENT CREATING HAND-HYGIENE AWARENESS AMONG ALL!</a></h3>
+                </div>
+            </div>
+            <div class="ev1">
+                <img src="https://aighospitals.com/wp-content/uploads/2022/06/Colon-Cancer-Awareness.jpg">
+                <div class="desc">
+                    <h3><a href="https://aighospitals.com/event/colon-cancer-awareness-campaign-at-aig-hospitals/">COLON CANCER AWARENESS CAMPAIGN AT AIG HOSPITALS</a></h3>
+                </div>
+            </div>
+            <div class="ev1">
+                <img src="https://aighospitals.com/wp-content/uploads/2022/03/Womens-Day-Celebrations4.jpg">
+                <div class="desc">
+                    <h3><a href="https://aighospitals.com/event/womens-day-celebrations-aig-hospitals/">WOMEN’S DAY CELEBRATIONS – AIG HOSPITALS</a></h3>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+
+
+
+
+
+    <div class="down">
+        <div class="ft1">
+            <P>PATIENT INFORMATION</P>
+            <P>INSURANCE&TPA</P>
+            <P>INTERNATIONAL PATIENTS</P>
+            <P>BIOEDICAL WASTE MAHAGEMENT</P>
+            <P>AIG BROCHURE</P>
+        </div>
+        <div class="ft2">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="cprt"><p>CopyRight2023,AIG Hostipals</p></div>
+        <div class="rqst">
+            <a href="login.html" id="rq">Request An Appointment</p>
+            <!-- <p>Find A Doctor</p> -->
+        </div>
+    </div>
+</div>
+
+
+	
+</body>
+</html>

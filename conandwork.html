@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+         *{
+    margin: 0px;
+}
+.maincontainer{
+    width: 100%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    height: 20vh;
+}
+.navleft{
+    padding-right: 120px;
+    background-color: white;
+    /* height: 10vh; */
+}
+.nav{
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navright{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    /* margin-top: 30px; 
+    margin-right: 40px; */
+    background-color: white;
+    padding-top: 30px;
+    padding-right: 40px;
+    height: 10vh;
+
+}
+.navright a{
+    color: black;
+    text-decoration: none;
+
+}
+.cover{
+    position:relative;
+    margin-top: 25vh;
+    width: 100%;
+    background: url('https://aighospitals.com/wp-content/uploads/2018/06/Conferences.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+
+}
+.subnav{
+    position: fixed;
+    
+    z-index: 2;
+    background-color: rgb(32, 84, 156);
+    width:80% ;
+    height: 7vh;
+    border-radius: 30px;
+    top: 15vh;
+    left: 15%;
+    right: 5%;
+    display: flex;
+    justify-content: left;
+    /* padding-top: 15px;
+    padding-bottom: 10px; */
+    align-items: center;
+
+}
+.subnav a{
+    height: 30px;
+    text-decoration: none;
+    color: white;
+}
+/* .search{
+    border-radius: 50px;
+    height: 30px;
+    width: 20%;
+    align-items: center;
+    background-color:rgb(255, 255, 255) ;
+} */
+#srccon{
+    position: relative;
+    padding-top: 5px;
+    left: 20px;               
+    /* align-items: center; */
+    height: 23px;
+    font-size: x-large;
+    color:rgb(212, 213, 216) ;
+}
+#input{
+    border: 2px solid rgb(70, 145, 243);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    /* height: 80%; */
+    position: relative;
+    left: 20px;
+    height: 30px;
+    width: 10%;
+    outline: none;
+}
+#input:focus{
+    outline: none;
+    width: 90%;
+    transition: 0.5s;
+}
+.search i{
+    position: relative;
+    padding-top: 7px;
+    left: 15px;
+    align-items: center;
+    height: 22.7px;
+    /* color:rgb(90, 91, 92) ; */
+}
+h3{
+    color: rgb(112, 166, 242);
+}
+#para{
+    color: aliceblue;
+}
+
+
+
+
+
+
+.down{
+    
+    width: 100%;
+    height: 30vh;
+    background-color: rgba(0, 0, 0, 0.687);
+    
+}
+.ft1{
+    display: flex;
+    justify-content:space-between ;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 50px;
+}
+.ft1 p{
+    padding-right: 15px;
+    font-size: small;
+}
+.ft2 {
+    display: flex;
+    justify-content: center;
+}
+.ft2 i{
+    font-size:30px;
+    padding-right:20px;
+}
+.cprt{
+    display: flex;
+    justify-content: center;
+}
+.rqst{
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(252, 10, 66);
+    border-radius: 50px;
+    width: 30%;
+    position: fixed;
+    bottom: 6px;
+    right: 35%;
+}
+/* #rq{
+    border-right: 2px solid rgb(65, 64, 64);
+} */
+.rqst a{
+    margin: 10px;
+    text-decoration: none;
+    color: azure;
+
+
+}
+#lp{
+    color: white;
+    padding: 10px;
+    word-spacing: 8px;
+
+}
+h2{
+    margin-top: 30px;
+    font-size:xx-large;
+    font-weight: -500;
+    position: relative;
+    left: 20px;
+}
+.data{
+    position: relative;
+    left: 12%;
+    top: 24vh;
+    width: 800px;
+    font-size: larger;
+}
+.con{
+    width: 100%;
+}
+.books1 img,.books2 img{
+    width:280px;
+    height: 300px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    
+}
+
+.books1 img:hover{
+    transition: 1.4s;
+    box-shadow: 10px 10px 60px 10px;
+        /* width:300px;
+        height:320px; */
+    transform: rotateY(30deg) rotateX(20deg);
+}
+.books1{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1px;
+    margin-top: 30px;
+}
+.social1{
+    position: fixed;
+    right: 1px;
+    top: 40%;
+    z-index: 2;
+    background: #3B5998;
+    color: white;
+  width: 50px;
+  height: 50px;
+}
+.fa-brands{
+    /* width: 100%;
+  height: 50px; */
+  
+  font-size: 50px;
+}
+.social2{
+    position: fixed;
+    right: 1px;
+    top: 48.4%;
+    z-index: 2;
+    background: #55ACEE;
+  color: white;
+}
+.social3{
+    position: fixed;
+    right: 1px;
+    top: 56.5%;
+    z-index: 2;
+    background: #dd4b39;
+  color: white;
+  /* font-size: 50px;
+  width: 50px; */
+}
+
+/* .books1,.books2{
+    display:flex;
+    justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    /* justify-content: space-around; */
+
+
+
+    </style>
+    <script>
+        function fun(e){
+            console.log(e)
+        }
+    </script>
+	
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="nav">
+            <div class="navleft"><img src="hsplogo.jpg"></div>
+            <div class="navright">
+                <a href="website.html">Home</a>
+
+                <a href="contactus.html">Contact us</a>
+
+                <a href="web-cs.html" target="_blank">Customersupport</a>
+                <!-- <a href="#">Careers</a> -->
+                <a href="prevent.html">Events</a>
+                <a href="conandwork.html">Conferences and Workspace</a>
+                
+                <a href="prlocation.html"><i class="fa-solid fa-location-dot"></i>Loction</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <!-- <a href="#">About US</a>
+            <a href="#">Specialities</a>
+            <a href="#">Find A Doctor</a>
+            <a href="#">Education Hub</a>
+            <a href="#">Research</a>
+            <a href="#">Health Packages</a> -->
+            <i  id="srccon" class="fa-solid fa-magnifying-glass"></i><input id="input" type="text" name=""placeholder="search">
+
+        </div>
+        <div class="social1">
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="social2">
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="social3">
+            <i class="fa-brands fa-google"></i>   
+        </div>
+
+        <div class="con">
+            <div class="cover">
+                <div class="data">
+                    <h3>CONFERENCES AND WORKSHOPS</h3>
+                    <p id="para">Meet the luminaries of gastroenterology</br>
+                        and learn from their experience.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="work">
+            <h2>All Workshops</h2>
+            <div class="books1">
+                <Img src="https://aighospitals.com/wp-content/uploads/2023/02/ibd-summit-2023.png"></Img>
+                <Img src="https://aighospitals.com/wp-content/uploads/2022/12/mega-ent-surgical-update.jpg"></Img>
+                <Img src="https://aighospitals.com/wp-content/uploads/2022/12/Women-in-medicine-conclave.jpg"></Img>
+                
+               
+                <Img src="https://aighospitals.com/wp-content/uploads/2022/12/Endoscopy-in-IBD-2022.jpg"></Img>
+                <Img src="https://aighospitals.com/wp-content/uploads/2022/08/Endocon2022.jpg"></Img>
+                <Img src="https://aighospitals.com/wp-content/uploads/2022/09/Eye-connect.png"></Img>
+
+            </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+        <div class="down">
+            <div class="ft1">
+                <P id="lp">PATIENT INFORMATION</P>
+                <P id="lp">INSURANCE&TPA</P>
+                <P id="lp">INTERNATIONAL PATIENTS</P>
+                <P id="lp">BIOEDICAL WASTE MAHAGEMENT</P>
+                <P id="lp">AIG BROCHURE</P>
+            </div>
+            <div class="ft2">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="cprt"><p>CopyRight2023,AIG Hostipals</p></div>
+            <div class="rqst">
+                <a href="login.html" id="rq">Request An Appointment</a>
+                <!-- <a href="#">Find A Doctor</a> -->
+            </div>
+        </div>
+    
+	
+</body>
+</html>
